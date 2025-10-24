@@ -4,3 +4,7 @@ body {
   font-family: 'Bricolage Grotesque', sans-serif;
   color: #feffff;
 }
+
+h1 {
+  font-size: 2.5rem;
+}
