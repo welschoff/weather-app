@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 :root {
-  --card-background: #25253f;
+  --card-bg: #25253f;
   --secondary-text-color: #b5bef4;
 }
 

@@ -1,4 +1,5 @@
 import './App.css';
+import Details from './components/Details';
 import Header from './components/Header';
 import Search from './components/Search';
 import Title from './components/Title';
@@ -11,6 +12,7 @@ function App() {
       <Title />
       <Search />
       <TodayCard />
+      <Details />
     </div>
   );
 }

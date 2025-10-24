@@ -8,7 +8,7 @@ function Header() {
       <div>
         <img src={logo} alt="" />
       </div>
-      <div className="grid grid-flow-col items-center gap-2 px-5 py-3 bg-(--card-background) rounded-lg">
+      <div className="grid grid-flow-col items-center gap-2 px-5 py-3 bg-(--card-bg) rounded-lg">
         <img src={units} alt="" />
         <span>Units</span>
         <img className="w-4" src={dropdown} alt="" />
