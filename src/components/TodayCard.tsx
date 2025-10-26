@@ -10,7 +10,6 @@ export default function TodayCard() {
     <div
       className="
         relative 
-        h-[286px] w-full
         bg-cover bg-center bg-no-repeat 
         rounded-3xl
       "

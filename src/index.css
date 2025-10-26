@@ -6,7 +6,7 @@
 }
 
 body {
-  height: 100vh;
+  max-height: 100vh;
   font-family: 'Bricolage Grotesque', sans-serif;
   color: #feffff;
 }

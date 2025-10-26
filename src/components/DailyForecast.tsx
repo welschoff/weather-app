@@ -3,9 +3,9 @@ import sunny from '../assets/images/icon-sunny.webp';
 
 function DailyForecast() {
   return (
-    <div className="mt-5">
+    <div>
       <h2 className="mb-3">Daily Forecast</h2>
-      <div className="flex gap-3 justify-between">
+      <div className="flex gap-2 justify-between">
         <DailyCard day="Tue" weatherImg={sunny} maxTemp="20°" minTemp="14°" />
         <DailyCard day="Wed" weatherImg={sunny} maxTemp="20°" minTemp="14°" />
         <DailyCard day="Thu" weatherImg={sunny} maxTemp="20°" minTemp="14°" />

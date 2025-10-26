@@ -4,7 +4,7 @@ import dropdown from '../assets/images/icon-dropdown.svg';
 
 function HourlyForecast() {
   return (
-    <div className="bg-(--card-bg) p-4 rounded-lg">
+    <div className="bg-(--card-bg) p-4 rounded-lg h-full">
       <div className="flex justify-between mb-3">
         <h2>Hourly Forecast</h2>
         <div className="flex gap-2 bg-[#3D3B5B] px-4 py-1 rounded-lg">
