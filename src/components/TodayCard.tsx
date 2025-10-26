@@ -9,7 +9,7 @@ export default function TodayCard() {
   return (
     <div
       className="
-        mt-10 relative 
+        relative 
         h-[286px] w-full
         bg-cover bg-center bg-no-repeat 
         rounded-3xl

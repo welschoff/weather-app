@@ -1,0 +1,19 @@
+type HourCardProps = {
+  weatherImg: string;
+  time: string;
+  temp: string;
+};
+
+function HourCard({ weatherImg, time, temp }: HourCardProps) {
+  return (
+    <div className="grid grid-flow-col w-full justify-between items-center bg-[#302E49] rounded-lg p-2">
+      <div className="flex items-center">
+        <img className="w-10" src={weatherImg} alt="" />
+        <span>{time}</span>
+      </div>
+      <span>{temp}</span>
+    </div>
+  );
+}
+
+export default HourCard;
