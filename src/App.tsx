@@ -1,4 +1,5 @@
 import './App.css';
+import DailyForecast from './components/DailyForecast';
 import Details from './components/Details';
 import Header from './components/Header';
 import Search from './components/Search';
@@ -11,8 +12,14 @@ function App() {
       <Header />
       <Title />
       <Search />
-      <TodayCard />
-      <Details />
+      <div className="grid grid-cols-[75%_25%]">
+        <div>
+          <TodayCard />
+          <Details />
+          <DailyForecast />
+        </div>
+        <div></div>
+      </div>
     </div>
   );
 }

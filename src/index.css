@@ -2,10 +2,11 @@
 
 :root {
   --card-bg: #25253f;
-  --secondary-text-color: #b5bef4;
+  --secondary-text-color: #b9b9b9;
 }
 
 body {
+  height: 100vh;
   font-family: 'Bricolage Grotesque', sans-serif;
   color: #feffff;
 }
