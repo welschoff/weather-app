@@ -1,28 +1,24 @@
-import today_bg from '../assets/images/bg-today-large.svg';
+import today_small from '../assets/images/bg-today-small.svg';
 import sunny from '../assets/images/icon-sunny.webp';
 
 export default function TodayCard() {
-  const backgroundStyle = {
-    backgroundImage: `url(${today_bg})`,
-  };
-
   return (
-    <div
-      className="
-        relative 
-        bg-cover bg-center bg-no-repeat 
-        rounded-3xl
-      "
-      style={backgroundStyle}
-    >
-      <div className="absolute inset-0 grid grid-cols-2 place-items-center">
-        <div className="grid gap-1 justify-self-start ml-5">
-          <span className="text-2xl font-semibold">Berlin, Germany</span>
-          <span className="text-sm font-extralight">Tuesday, Aug 5, 2025</span>
+    <div className="relative rounded-3xl overflow-hidden">
+      <img
+        src={today_small}
+        alt="Hintergrund"
+        className="w-full h-auto block"
+      />
+      <div className="absolute inset-0 grid gap-2 h-full place-items-center">
+        <div className="grid gap-2 place-items-center self-end">
+          <span className="text-3xl font-semibold">Berlin, Germany</span>
+          <span className="text-lg text-(--secondary-text-color)">
+            Tuesday, Aug 5, 2025
+          </span>
         </div>
-        <div className="flex justify-self-end items-center mr-5">
-          <img className="w-20" src={sunny} alt="Sonnensymbol" />
-          <span className="text-7xl italic">20°</span>
+        <div className="flex items-center self-start">
+          <img className="w-35" src={sunny} alt="Sonnensymbol" />
+          <span className="text-8xl font-semibold italic">20°</span>
         </div>
       </div>
     </div>

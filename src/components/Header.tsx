@@ -6,11 +6,11 @@ function Header() {
   return (
     <div className="flex justify-between items-center">
       <div>
-        <img src={logo} alt="" />
+        <img className="w-35" src={logo} alt="" />
       </div>
-      <div className="grid grid-flow-col items-center gap-2 px-5 py-3 bg-(--card-bg) rounded-lg">
-        <img src={units} alt="" />
-        <span>Units</span>
+      <div className="flex gap-2 px-3 py-2 bg-(--card-bg) rounded-lg">
+        <img src={units} alt="Units Image" />
+        <span className="text-sm">Units</span>
         <img className="w-4" src={dropdown} alt="" />
       </div>
     </div>

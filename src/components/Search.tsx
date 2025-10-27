@@ -2,12 +2,18 @@ import search from '../assets/images/icon-search.svg';
 
 function Search() {
   return (
-    <div className="flex justify-center">
-      <div className="flex px-5 py-2 rounded-lg w-1/2 bg-(--card-bg)">
+    <div className="grid gap-3">
+      <div className="flex px-5 py-3 w-full rounded-lg bg-(--card-bg)">
         <img className="mr-5 w-5" src={search} alt="" />
-        <input type="text" placeholder="Search for a place..." />
+        <input
+          className="border-none"
+          type="text"
+          placeholder="Search for a place..."
+        />
       </div>
-      <button className="ml-3 px-5 py-3 bg-[#4657D9] rounded-lg">Search</button>
+      <button className="w-full px-5 py-3 bg-[#4657D9] rounded-lg">
+        Search
+      </button>
     </div>
   );
 }

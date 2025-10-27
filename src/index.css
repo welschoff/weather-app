@@ -1,5 +1,11 @@
 @import 'tailwindcss';
 
+@layer base {
+  body {
+    @apply text-xl;
+  }
+}
+
 :root {
   --card-bg: #25253f;
   --secondary-text-color: #b9b9b9;
@@ -9,8 +15,4 @@ body {
   max-height: 100vh;
   font-family: 'Bricolage Grotesque', sans-serif;
   color: #feffff;
-}
-
-h1 {
-  font-size: 2.5rem;
 }

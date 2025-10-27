@@ -6,9 +6,9 @@ function HourlyForecast() {
   return (
     <div className="bg-(--card-bg) p-4 rounded-lg h-full">
       <div className="flex justify-between mb-3">
-        <h2>Hourly Forecast</h2>
+        <h2>Hourly forecast</h2>
         <div className="flex gap-2 bg-[#3D3B5B] px-4 py-1 rounded-lg">
-          <span>Tuesday</span>
+          <span className="text-base">Tuesday</span>
           <img src={dropdown} alt="" />
         </div>
       </div>
