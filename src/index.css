@@ -1,4 +1,18 @@
+@import 'tailwindcss';
+
+@layer base {
+  body {
+    @apply text-xl;
+  }
+}
+
+:root {
+  --card-bg: #25253f;
+  --secondary-text-color: #d7d6e7;
+}
+
 body {
+  max-height: 100vh;
   font-family: 'Bricolage Grotesque', sans-serif;
   color: #feffff;
 }
