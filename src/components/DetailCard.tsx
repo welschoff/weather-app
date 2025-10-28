@@ -5,9 +5,9 @@ type DetailCardProps = {
 
 function DetailCard({ header, value }: DetailCardProps) {
   return (
-    <div className="grid gap-2 p-2 bg-(--card-bg) w-full items-center rounded-lg pl-5">
-      <span className="font-extralight">{header}</span>
-      <span className="text-3xl font-light">{value}</span>
+    <div className="grid gap-5 p-3 bg-(--card-bg) w-full items-center rounded-lg pl-5 font-extralight">
+      <span className="text-(--secondary-text-color) text-lg">{header}</span>
+      <span className="text-4xl">{value}</span>
     </div>
   );
 }
