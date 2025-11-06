@@ -1,40 +1,16 @@
 import today_small from '../assets/images/bg-today-small.svg';
 import sunny from '../assets/images/icon-sunny.webp';
-import { useQuery, useQueryClient } from '@tanstack/react-query';
-import { getCurrentWeather } from '../api/weatherService';
+import { useLocationQuery } from '../hooks/useLocationQuery';
+import { useWeatherQuery } from '../hooks/useWeatherQuery';
 
 export default function TodayCard() {
-  const queryClient = useQueryClient();
+  const { data: location } = useLocationQuery();
+  const { data: weatherData, isLoading, isError } = useWeatherQuery(location);
 
-  const { data: location } = useQuery<
-    { lat: number; lon: number; name: string } | undefined
-  >({
-    queryKey: ['location'],
-    queryFn: async () => {
-      return queryClient.getQueryData(['location']);
-    },
-    initialData: { lat: 52.52, lon: 13.405, name: 'Berlin' },
-    staleTime: Infinity,
-  });
+  if (isLoading) return <p>Lade Wetterdaten...</p>;
+  if (!weatherData) return <p>Keine Wetterdaten</p>;
+  if (isError) return <p>Fehler beim Laden!</p>;
 
-  const {
-    data: weatherData,
-    isLoading,
-    isError,
-  } = useQuery({
-    queryKey: ['weather', location?.lat, location?.lon],
-    queryFn: async () => {
-      if (!location) throw new Error('No location');
-      return getCurrentWeather(location.lat, location.lon);
-    },
-    enabled: !!location,
-  });
-
-  if (isLoading) return <p>Lade Temperatur...</p>;
-  if (isError) return <p>Fehler beim Laden der Wetterdaten.</p>;
-  if (!weatherData) return null;
-
-  // Datum korrekt formatieren (sprache: 'de-DE')
   const today = new Date();
   const formattedDate = today.toLocaleDateString('de-DE', {
     weekday: 'long',
@@ -62,7 +38,7 @@ export default function TodayCard() {
         <div className="flex items-center self-start">
           <img className="w-35" src={sunny} alt="Sonnensymbol" />
           <span className="text-8xl font-semibold">
-            {Math.round(weatherData.current_weather.temperature)}°
+            {Math.round(weatherData.current.temperature_2m)}°
           </span>
         </div>
       </div>
