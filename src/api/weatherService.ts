@@ -15,7 +15,8 @@ export const getCurrentWeather = async (
         'wind_speed_10m',
         'precipitation',
         'apparent_temperature',
-      ].join(','),
+      ],
+      daily: ['temperature_2m_max', 'temperature_2m_min'],
     },
   });
 

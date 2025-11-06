@@ -6,8 +6,15 @@ export interface CurrentWeather {
   apparent_temperature: number;
 }
 
+export interface DailyWeather {
+  temperature_2m_max: number[];
+  temperature_2m_min: number[];
+  time: string[];
+}
+
 export interface WeatherResponse {
   latitude: number;
   longitude: number;
   current: CurrentWeather;
+  daily: DailyWeather;
 }

@@ -14,7 +14,7 @@ export function useLocationQuery() {
     queryFn: async () => {
       return queryClient.getQueryData(['location']);
     },
-    initialData: { lat: 52.52, lon: 13.405, name: 'Berlin' },
+    initialData: { lat: 51.214, lon: 6.786, name: 'Düsseldorf' },
     staleTime: Infinity,
   });
 }

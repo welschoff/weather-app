@@ -1,8 +1,8 @@
 type DailyCardProps = {
   day: string;
   weatherImg: string;
-  maxTemp: string;
-  minTemp: string;
+  maxTemp: number;
+  minTemp: number;
 };
 
 function DailyCard({ day, weatherImg, maxTemp, minTemp }: DailyCardProps) {
@@ -11,8 +11,8 @@ function DailyCard({ day, weatherImg, maxTemp, minTemp }: DailyCardProps) {
       <span>{day}</span>
       <img className="w-25" src={weatherImg} alt="Weather Image" />
       <div className="flex justify-between w-full">
-        <span>{maxTemp}</span>
-        <span className="text-(--secondary-text-color)">{minTemp}</span>
+        <span>{maxTemp}°</span>
+        <span className="text-(--secondary-text-color)">{minTemp}°</span>
       </div>
     </div>
   );
