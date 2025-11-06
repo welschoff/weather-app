@@ -17,7 +17,7 @@ function App() {
         <Header />
         <Title />
         <Search />
-        <TodayCard lat={52.52} lon={13.41} city="Berlin" />
+        <TodayCard />
         <Details />
         <DailyForecast />
         <HourlyForecast />
