@@ -9,8 +9,15 @@ export const getCurrentWeather = async (
     params: {
       latitude,
       longitude,
-      current_weather: true,
+      current: [
+        'temperature_2m',
+        'relative_humidity_2m',
+        'wind_speed_10m',
+        'precipitation',
+        'apparent_temperature',
+      ].join(','),
     },
   });
+
   return data;
 };
