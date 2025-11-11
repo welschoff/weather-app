@@ -9,7 +9,7 @@ export function useWeatherQuery(location?: LocationData) {
     queryFn: async () => {
       if (!location) throw new Error('No location');
       const data = await getCurrentWeather(location.lat, location.lon);
-      console.log(data);
+
       return data;
     },
     enabled: !!location,

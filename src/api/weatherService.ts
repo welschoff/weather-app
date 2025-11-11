@@ -17,6 +17,7 @@ export const getCurrentWeather = async (
         'apparent_temperature',
       ],
       daily: ['temperature_2m_max', 'temperature_2m_min'],
+      hourly: 'temperature_2m',
     },
   });
 

@@ -9,5 +9,6 @@ export const getLocation = async (name: string) => {
       },
     }
   );
+
   return data;
 };

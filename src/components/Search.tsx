@@ -14,8 +14,9 @@ function Search() {
       const lat = result.latitude;
       const lon = result.longitude;
       const name = result.name;
+      const timezone = result.timezone;
 
-      queryClient.setQueryData(['location'], { lat, lon, name });
+      queryClient.setQueryData(['location'], { lat, lon, name, timezone });
     },
   });
 

@@ -12,9 +12,15 @@ export interface DailyWeather {
   time: string[];
 }
 
+export interface HourlyWeather {
+  temperature_2m: number[];
+  time: string[];
+}
+
 export interface WeatherResponse {
   latitude: number;
   longitude: number;
   current: CurrentWeather;
   daily: DailyWeather;
+  hourly: HourlyWeather;
 }

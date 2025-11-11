@@ -1,7 +1,7 @@
 type HourCardProps = {
   weatherImg: string;
+  temp: number;
   time: string;
-  temp: string;
 };
 
 function HourCard({ weatherImg, time, temp }: HourCardProps) {
@@ -11,7 +11,7 @@ function HourCard({ weatherImg, time, temp }: HourCardProps) {
         <img className="w-15" src={weatherImg} alt="" />
         <span className="text-2xl">{time}</span>
       </div>
-      <span>{temp}</span>
+      <span>{temp}°</span>
     </div>
   );
 }

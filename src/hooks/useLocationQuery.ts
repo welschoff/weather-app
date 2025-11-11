@@ -4,6 +4,7 @@ export interface LocationData {
   lat: number;
   lon: number;
   name: string;
+  timezone: string;
 }
 
 export function useLocationQuery() {
@@ -14,7 +15,12 @@ export function useLocationQuery() {
     queryFn: async () => {
       return queryClient.getQueryData(['location']);
     },
-    initialData: { lat: 51.214, lon: 6.786, name: 'Düsseldorf' },
+    initialData: {
+      lat: 51.214,
+      lon: 6.786,
+      name: 'Düsseldorf',
+      timezone: 'Europe/Berlin',
+    },
     staleTime: Infinity,
   });
 }
