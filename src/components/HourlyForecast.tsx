@@ -1,9 +1,9 @@
 import HourCard from './HourCard';
-import sunny from '../assets/images/icon-sunny.webp';
 import dropdown from '../assets/images/icon-dropdown.svg';
 import { useLocationQuery } from '../hooks/useLocationQuery';
 import { useWeatherQuery } from '../hooks/useWeatherQuery';
 import { DateTime } from 'luxon';
+import WeatherIcon from './WeatherIcon';
 
 function HourlyForecast() {
   const { data: location, isLoading: isLocationLoading } = useLocationQuery();
@@ -30,23 +30,26 @@ function HourlyForecast() {
     Math.round(hour)
   );
 
+  const weatherCode = weatherData.daily.weather_code;
+
   return (
     <div className="bg-(--card-bg) p-4 rounded-lg h-full">
       <div className="flex justify-between mb-3">
         <h2>Hourly forecast</h2>
         <div className="flex gap-2 bg-[#3D3B5B] px-4 py-1 rounded-lg">
           <span className="text-base">Tuesday</span>
-          <img src={dropdown} alt="" />
+          <img className="w-5" src={dropdown} alt="" />
         </div>
       </div>
 
       <div className="grid gap-2">
-        {temps.slice(0, 8).map((temp, idx) => (
+        {temps.slice(0, 8).map((temp, i) => (
           <HourCard
-            key={idx}
-            weatherImg={sunny}
+            key={i}
+            WeatherIcon={WeatherIcon}
+            code={weatherCode[i]}
             temp={temp}
-            time={timeLabels[idx]}
+            time={timeLabels[i]}
           />
         ))}
       </div>

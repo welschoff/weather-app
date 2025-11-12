@@ -1,5 +1,5 @@
 import today_small from '../assets/images/bg-today-small.svg';
-import sunny from '../assets/images/icon-sunny.webp';
+import WeatherIcon from './WeatherIcon';
 import { useLocationQuery } from '../hooks/useLocationQuery';
 import { useWeatherQuery } from '../hooks/useWeatherQuery';
 
@@ -36,7 +36,10 @@ export default function TodayCard() {
           </span>
         </div>
         <div className="flex items-center self-start">
-          <img className="w-35" src={sunny} alt="Sonnensymbol" />
+          <WeatherIcon
+            weather_code={weatherData.current.weather_code}
+            size="w-35"
+          />
           <span className="text-8xl font-semibold">
             {Math.round(weatherData.current.temperature_2m)}°
           </span>
