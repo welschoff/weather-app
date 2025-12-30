@@ -1,17 +1,22 @@
+import type { ComponentType } from 'react';
+import type { WeatherIconProps } from '../types/weather';
+import WeatherIcon from './WeatherIcon';
+
 type HourCardProps = {
-  weatherImg: string;
+  WeatherIcon: ComponentType<WeatherIconProps>;
+  temp: number;
   time: string;
-  temp: string;
+  code: number;
 };
 
-function HourCard({ weatherImg, time, temp }: HourCardProps) {
+function HourCard({ code, time, temp }: HourCardProps) {
   return (
     <div className="grid grid-flow-col w-full justify-between items-center bg-[#302E49] rounded-lg p-2">
       <div className="flex items-center">
-        <img className="w-15" src={weatherImg} alt="" />
+        <WeatherIcon weather_code={code} size="w-10" />
         <span className="text-2xl">{time}</span>
       </div>
-      <span>{temp}</span>
+      <span>{temp}°</span>
     </div>
   );
 }

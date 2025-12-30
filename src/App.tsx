@@ -6,18 +6,23 @@ import HourlyForecast from './components/HourlyForecast';
 import Search from './components/Search';
 import Title from './components/Title';
 import TodayCard from './components/TodayCard';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <div className="flex flex-col gap-5 p-5">
-      <Header />
-      <Title />
-      <Search />
-      <TodayCard />
-      <Details />
-      <DailyForecast />
-      <HourlyForecast />
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div className="flex flex-col gap-5 p-5">
+        <Header />
+        <Title />
+        <Search />
+        <TodayCard />
+        <Details />
+        <DailyForecast />
+        <HourlyForecast />
+      </div>
+    </QueryClientProvider>
   );
 }
 
