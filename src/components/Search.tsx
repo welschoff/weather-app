@@ -29,7 +29,7 @@ function Search() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="grid gap-3">
+      <div className="grid gap-3 lg:flex">
         <div className="flex px-5 py-3 w-full rounded-lg bg-(--card-bg)">
           <img className="mr-5 w-5" src={search} alt="" />
           <input
@@ -43,7 +43,7 @@ function Search() {
         <button
           type="submit"
           disabled={mutation.isPending}
-          className="w-full px-5 py-3 bg-[#4657D9] rounded-lg"
+          className="w-full px-5 py-3 bg-[#4657D9] rounded-lg lg:w-fit"
         >
           {mutation.isPending ? 'Searching...' : 'Search'}
         </button>

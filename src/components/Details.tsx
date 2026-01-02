@@ -15,7 +15,7 @@ function Details() {
   );
 
   return (
-    <div className="grid grid-cols-2 grid-rows-2 gap-3">
+    <div className="mt-5 grid grid-cols-2 grid-rows-2 gap-3 lg:flex">
       <DetailCard header="Feels Like" value={apparentTemparature} unit="°" />
       <DetailCard
         header="Humidity"

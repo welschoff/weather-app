@@ -32,7 +32,7 @@ function HourlyForecast() {
   const weatherCode = weatherData.daily.weather_code;
 
   return (
-    <div className="bg-(--card-bg) p-4 rounded-lg h-full">
+    <div className="bg-(--card-bg) p-4 rounded-lg">
       <div className="mb-3">
         <h2>Hourly forecast</h2>
       </div>

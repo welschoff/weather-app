@@ -1,4 +1,5 @@
 import today_small from '../assets/images/bg-today-small.svg';
+import today_large from '../assets/images/bg-today-large.svg';
 import WeatherIcon from './WeatherIcon';
 import { useLocationQuery } from '../hooks/useLocationQuery';
 import { useWeatherQuery } from '../hooks/useWeatherQuery';
@@ -24,10 +25,15 @@ export default function TodayCard() {
       <img
         src={today_small}
         alt="Hintergrund"
-        className="w-full h-auto block"
+        className="w-full h-auto block lg:hidden"
       />
-      <div className="absolute inset-0 grid gap-2 h-full place-items-center">
-        <div className="grid gap-2 place-items-center self-end">
+      <img
+        src={today_large}
+        alt="Hintergrund"
+        className="w-full h-auto hidden lg:block"
+      />
+      <div className="absolute inset-0 grid gap-2 place-items-center lg:grid-cols-2">
+        <div className="grid gap-2 place-items-center self-end lg:self-center">
           {location ? (
             <span className="text-3xl font-semibold">{location.name}</span>
           ) : null}
@@ -35,7 +41,7 @@ export default function TodayCard() {
             {formattedDate}
           </span>
         </div>
-        <div className="flex items-center self-start">
+        <div className="flex items-center self-start lg:self-center">
           <WeatherIcon
             weather_code={weatherData.current.weather_code}
             size="w-35"
