@@ -25,7 +25,7 @@ function DailyForecast() {
 
   return (
     <div>
-      <h2 className="pt-5 pb-5">Daily forecast</h2>
+      <h2 className="pb-5">Daily forecast</h2>
       <div className="grid grid-cols-3 gap-3 lg:flex justify-between">
         {days.map((day, i) => (
           <DailyCard

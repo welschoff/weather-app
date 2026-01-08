@@ -28,8 +28,8 @@ function Search() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="grid gap-3 lg:flex">
+    <form onSubmit={handleSubmit} className="lg:flex justify-center">
+      <div className="grid gap-3 lg:flex lg:w-[700px]">
         <div className="flex px-5 py-3 w-full rounded-lg bg-(--card-bg)">
           <img className="mr-5 w-5" src={search} alt="" />
           <input

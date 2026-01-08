@@ -23,7 +23,7 @@ function HourlyForecast() {
     return nowInTargetZone.plus({ hours: hourIndex }).toFormat('h a');
   };
 
-  const timeLabels = Array.from({ length: 8 }, (_, i) => formatTime(i));
+  const timeLabels = Array.from({ length: 24 }, (_, i) => formatTime(i));
 
   const temps: number[] = weatherData.hourly.temperature_2m.map((hour) =>
     Math.round(hour)
@@ -33,12 +33,12 @@ function HourlyForecast() {
 
   return (
     <div className="bg-(--card-bg) p-4 rounded-lg">
-      <div className="mb-3">
+      <div className="pb-4">
         <h2>Hourly forecast</h2>
       </div>
 
-      <div className="grid gap-2">
-        {temps.slice(0, 8).map((temp, i) => (
+      <div className="h-[calc(8*55px)] flex flex-col gap-2 overflow-y-auto">
+        {temps.slice(0, 23).map((temp, i) => (
           <HourCard
             key={i}
             WeatherIcon={WeatherIcon}

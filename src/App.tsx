@@ -13,20 +13,35 @@ const queryClient = new QueryClient();
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="p-5 lg:grid h-screen overflow-hidden">
-        <Header />
-        <div className="lg:px-50">
-          <Title />
-          <Search />
-        </div>
-        <div className="flex flex-col gap-5 lg:grid grid-cols-2">
-          <div className="lg:col-start-1">
-            <TodayCard />
-            <Details />
-            <DailyForecast />
+      <div className="lg:h-screen lg:grid lg:place-content-center">
+        <div
+          className="
+        p-5 
+        lg:px-15 
+        lg:grid 
+        lg:grid-rows-[auto_auto_1fr]
+        "
+        >
+          <Header />
+
+          <div>
+            <Title />
+            <Search />
           </div>
-          <div className="lg:col-start-2">
-            <HourlyForecast />
+
+          <div
+            className="
+          gap-5 flex flex-col pt-5
+          lg:grid lg:grid-cols-[2fr_1fr]"
+          >
+            <div className="flex flex-col gap-5 lg:max-h-[516px]">
+              <TodayCard />
+              <Details />
+              <DailyForecast />
+            </div>
+            <aside className="">
+              <HourlyForecast />
+            </aside>
           </div>
         </div>
       </div>
