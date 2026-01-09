@@ -21,7 +21,7 @@ export default function TodayCard() {
   });
 
   return (
-    <div className="relative rounded-3xl overflow-hidden">
+    <div className="relative rounded-3xl overflow-hidden max-h-[800px]">
       <img
         src={today_small}
         alt="Hintergrund"
@@ -29,8 +29,7 @@ export default function TodayCard() {
       />
       <img
         src={today_large}
-        alt="Hintergrund"
-        className="w-full h-auto hidden lg:block"
+        className="w-full object-contain hidden lg:block"
       />
       <div className="absolute inset-0 grid gap-2 place-items-center lg:grid-cols-2">
         <div className="grid gap-2 place-items-center self-end lg:self-center">

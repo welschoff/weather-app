@@ -17,10 +17,10 @@ function DailyCard({
   code,
 }: DailyCardProps) {
   return (
-    <div className="grid p-2 justify-items-center gap-2 bg-(--card-bg) rounded-lg lg:w-full">
+    <div className="grid p-2 justify-items-center gap-2 bg-(--card-bg) rounded-lg lg:w-full text-sm">
       <span>{day}</span>
-      <WeatherIcon weather_code={code} size="w-10" />
-      <div className="flex justify-between w-full">
+      <WeatherIcon weather_code={code} size="w-10 py-2" />
+      <div className="flex justify-between w-full text-sm">
         <span>{maxTemp}°</span>
         <span className="text-(--secondary-text-color)">{minTemp}°</span>
       </div>

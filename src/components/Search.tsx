@@ -30,10 +30,10 @@ function Search() {
   return (
     <form onSubmit={handleSubmit} className="lg:flex justify-center">
       <div className="grid gap-3 lg:flex lg:w-[700px]">
-        <div className="flex px-5 py-3 w-full rounded-lg bg-(--card-bg)">
+        <div className="flex px-5 w-full rounded-lg bg-(--card-bg)">
           <img className="mr-5 w-5" src={search} alt="" />
           <input
-            className="focus:outline-none"
+            className="focus:outline-none min-h-12"
             type="text"
             placeholder="Search for a place..."
             value={query}

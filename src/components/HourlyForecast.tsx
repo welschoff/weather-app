@@ -33,11 +33,11 @@ function HourlyForecast() {
 
   return (
     <div className="bg-(--card-bg) p-4 rounded-lg">
-      <div className="pb-4">
+      <div className="pb-3">
         <h2>Hourly forecast</h2>
       </div>
 
-      <div className="h-[calc(8*55px)] flex flex-col gap-2 overflow-y-auto">
+      <div className="h-[calc(8*59px)] flex flex-col gap-2 overflow-y-auto">
         {temps.slice(0, 23).map((temp, i) => (
           <HourCard
             key={i}
